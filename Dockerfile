@@ -38,13 +38,17 @@ WORKDIR /visqol
 # [3] https://dev.to/0xbf/how-to-get-glibc-version-c-lang-26he
 FROM buildstage1 as buildstage2
 COPY file_path.h src/include/
-COPY .bazelrc /visqol
-COPY setup.py /visqol
-COPY test.py /visqol
-COPY callee-dump-2023-04-04-09-42-51-dec.wav /visqol
-COPY caller-dump-2023-04-04-09-42-51-enc.wav /visqol
+COPY .bazelrc setup.py test.py callee.wav caller.wav build.sh /visqol/
+# COPY .bazelrc /visqol
+# COPY setup.py /visqol
+# COPY test.py /visqol
+# COPY callee.wav /visqol
+# COPY caller.wav /visqol
 
-# FROM buildstage2 as buildstage3
+FROM buildstage2 as buildstage3
+RUN chmod +x build.sh
+RUN source ./build.sh
+
 # RUN python3.8 -m venv env 
 # RUN source env/bin/activate 
 # RUN python3.8 -m pip install numpy scipy protobuf wheel
