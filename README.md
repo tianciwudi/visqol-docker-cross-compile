@@ -2,7 +2,7 @@
 This document describes on how one can set-up a Docker environment to cross-compile VISQOL for Amazon Lambda respectively Amazon Linux 2.
 
 ## Setting Up Amazon Linux Image
-To pull the image, just paste docker pull `amazonlinux:2` to the command line. To make sure, that we don’t download the image each time we build the container paste `docker tag amazonlinux:2 local-amazonlinux:2`. Now we can build from the local image. 
+To pull the image, just paste `docker pull amazonlinux:2` to the command line. To make sure, that we don’t download the image each time we build the container paste `docker tag amazonlinux:2 local-amazonlinux:2`. Now we can build from the local image. 
 
 ## Building the image
 To build the image, paste `docker build --tag="local-amazonlinux:latest" .`  to the command line. You could also paste `docker build .`, I just provided a new tag for versioning.
