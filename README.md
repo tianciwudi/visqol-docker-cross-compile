@@ -22,7 +22,7 @@ bashXX# bazel build :visqol -c opt
 bashXX# python3.8 -m pip install .
 ```
 
-After that, we just have to copy `visqol_lib_py.so` to the host system via `docker cp name-of-the-currently-running-container:/visqol/build/visqol/build ./build.` For that, open a second terminal window or kill the currently running container and then copy everything to get the container name. To get the container name, paste `docker ps -a` or `docker ps` to the command line.
+After that, we just have to copy `visqol_lib_py.so` to the host system via `docker cp name-of-the-currently-running-container:/visqol/build/lib/visqol/ ./build/ ` For that, open a second terminal window or kill the currently running container and then copy everything to get the container name. To get the container name, paste `docker ps -a` or `docker ps` to the command line.
 
 ## Setting Up Folder structure
 

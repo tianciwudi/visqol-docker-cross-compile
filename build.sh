@@ -13,3 +13,6 @@ python3.8 -m pip install numpy scipy protobuf wheel
 
 echo "3. Build visqol with bazel!"
 bazel build :visqol -c opt
+
+echo "4. Build .so visqol for python!"
+python3.8 -m pip install .
