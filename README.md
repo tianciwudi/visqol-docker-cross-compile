@@ -39,4 +39,4 @@ Additionally, to test, if we can calculate the MOS Score in the Docker environme
 The reason why I invoked the bazel build commands receptively the python3.8 commands manually inside the container was just for debugging purposes. You could definitely automate everything! I just wanted to make sure that I have control over each step in the building process.
 
 ## Update 20.09.2023
-If you run the script `invoke.sh``, then the complete building process will be executed automatically.
+If you run the script `invoke.sh`, then the complete building process will be executed automatically.
