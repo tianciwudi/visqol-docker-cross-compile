@@ -15,11 +15,11 @@ To run the image paste `docker run -it local-amazonlinux:latest` to the command 
 After you have started the interactive session within the container, just paste the following lines to the command line in the exact same order
 
 ```Shell
-bashXX# python3.8 -m venv env
-bashXX# source env/bin/activate
-bashXX# python3.8 -m pip install numpy scipy protobuf wheel
-bashXX# bazel build :visqol -c opt
-bashXX# python3.8 -m pip install .
+python3.8 -m venv env
+source env/bin/activate
+python3.8 -m pip install numpy scipy protobuf wheel
+bazel build :visqol -c opt
+python3.8 -m pip install .
 ```
 
 After that, we just have to copy `visqol_lib_py.so` to the host system via `docker cp name-of-the-currently-running-container:/visqol/build/lib/visqol/ ./build/ ` For that, open a second terminal window or kill the currently running container and then copy everything to get the container name. To get the container name, paste `docker ps -a` or `docker ps` to the command line.
