@@ -35,8 +35,8 @@ Before we try to build https://github.com/google/visqol, we have to setup our pr
 
 Additionally, to test, if we can calculate the MOS Score in the Docker environment via VISQOL, we provide two audio files: callee.wav ('degraded' audio) and caller.wav ('reference' audio). The next sub sections  describe the content of each file.  Just copy them into your folder!
 
-## Update 19.07.2023
-Currently working on a bash script, that automates all `python` and `bazel` commands
-
 ## Important Notes:
 The reason why I invoked the bazel build commands receptively the python3.8 commands manually inside the container was just for debugging purposes. You could definitely automate everything! I just wanted to make sure that I have control over each step in the building process.
+
+## Update 20.09.2023
+If you run the script `invoke.sh``, then the complete building process will be executed automatically.
