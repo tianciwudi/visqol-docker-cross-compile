@@ -50,4 +50,5 @@ similarity_result_scipy = api.Measure(
     deg_file_scipy.astype(dtype=np.float64, copy=False)
 )
 
+# Test results
 print(f"MOS w. scipy: {similarity_result_scipy.moslqo:_>10}")
