@@ -1,0 +1,31 @@
+name: Build and Save Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4  # Update to the latest version that supports Node.js 20
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3  # Update to the latest version that supports Node.js 20
+
+    - name: Build Docker image
+      run: |
+        docker build -t my-image:latest .
+
+    - name: Save Docker image to file
+      run: |
+        docker save my-image:latest -o my-image.tar
+
+    - name: Upload Docker image artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-image
+        path: my-image.tar
