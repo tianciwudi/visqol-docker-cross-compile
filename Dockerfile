@@ -7,6 +7,7 @@ FROM local-amazonlinux:2 AS buildstage0
 # Download all necessary packages
 # eventually!
 # https://serverfault.com/questions/868600/can-i-install-a-recent-gcc-from-binaries-on-amazon-linux
+
 RUN yum install -y sudo 
 RUN yum update -y && \
     yum groupinstall 'Development Tools' -y && \
